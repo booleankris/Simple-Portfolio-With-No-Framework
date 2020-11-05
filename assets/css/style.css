@@ -195,6 +195,13 @@ a{
 	font-family: 'Quicksand';
 	color: #2196f3;
 	text-transform: uppercase;
+	transition: 1s;
+}
+.desktop-navbar-caption:hover{
+	padding: 0.5em 3em;
+	border-radius: 25px;
+	color: #2196f3;
+	animation: pulse 1s;
 }
 .footer-section{
 	width: 100%;
@@ -208,6 +215,7 @@ a{
 	font-weight: 600;
 	font-family: 'Quicksand';
 }
+
 /**/
 
 /* Hero Section*/
@@ -495,6 +503,21 @@ a{
 		right: 0px;
 	}
 }
+@keyframes pulse{
+    0%{
+        transform: scale(0.88);
+        box-shadow: 0 0 0 0 #2196f3;
+    }
+    70%{
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);  
+    }
+    100%{
+        transform: scale(0.88);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); 
+    }
+
+}
 @media only screen and (max-width: 767px){
 	.desktop {
 		display: none;
@@ -524,10 +547,18 @@ a{
 	}
 	.navbar-icon img{
 		object-fit: cover;
+		transition: 0.5s;
+	}
+	.navbar-icon img:hover{
+		animation: pulse 1.3s;
+		border-radius: 20px;
 	}
 	.navbar-item{
 		padding: 0em 1em;
 	}
+/*	.navbar-item:hover{
+		animation: pulse 1.3s;
+	}*/
 	.navbar-caption{
 		padding: 0.7em 0.4em 0;
 		font-family: 'Quicksand';
@@ -535,9 +566,9 @@ a{
 	    font-weight: 800;
 	    color: #53585d;
 	}
-	.work-container{
+	/*.work-container{
 		margin-bottom: 2em;
-	}
+	}*/
 	.portfolioself{
 		background-attachment: fixed;
 		width: 90%;
